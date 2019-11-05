@@ -5,7 +5,7 @@
 
 # About
 
-This application is developed in Python Django (a web framework for rapid development). The beauty of this project that user can stop quiz at any during the period of quiz exam. The  A user can sign in with any of the one roles "Admin" or "Normal User". This Web Application presents a set of random questions from database to user and calculates user score accordingly.
+This application is developed in Python Django (a web framework for rapid development). The beauty of this project is that user can stop quiz at any during the period of quiz exam. The  A user can sign in with any of the one roles "Admin" or "Normal User". This Web Application presents a set of random questions from database to user and calculates user score accordingly.
 
 # Add Features
 
@@ -47,7 +47,7 @@ This application is developed in Python Django (a web framework for rapid develo
  
 ### Environment:
   
-   Source code to this tool is coded in Python3, with its GUI running in Django env.
+   Source code to this project is coded in Python3, with its GUI running in Django framework.
  
  
 ### Packages:
@@ -62,13 +62,13 @@ This application is developed in Python Django (a web framework for rapid develo
  
 ## INSTALLATION 
  
-   Use the package manager [pip](https://pip.pypa.io/en/stable/) to install packages subprocess, os, pymongo and set env for Python3.
+   Use the package manager [pip](https://pip.pypa.io/en/stable/) to install packages subprocess, os and set env for Python3.
  
 ### Packages :  
 
-   	$ pip install python3
-   	$ pip install djando
-   	$ pip install pymongo
+	$ pip install virtualenv
+   	$ pip install subprocess
+   	$ pip install os 
 
  
 ### Python3 env :
@@ -76,29 +76,64 @@ This application is developed in Python Django (a web framework for rapid develo
    	$ pip install python3.7 python-pip
 
 
-### Setting up PyQt5 env for Python3 :
+### Setting up Django framework for Python3 :
 
-   	$ pip install python-pyqt5
+   	$ pip install Django
 
 
-   Installing exiftool from https://sno.phy.queensu.ca/~phil/exiftool/install.html#Windows link :
-   
-   exiftool.exe
+   Installing Django from https://docs.djangoproject.com/en/2.2/intro/install/
+
+## Postgres Install :
+
+### Install PostgreSQL on Ubuntu :
+
+	$ sudo apt-get update
+	$ sudo apt-get install postgresql postgresql-contrib
+
+To connect with PostgreSQL.
+	
+	$ sudo su - postgres
+	$ psql
+	$ postgres-# \conninfo
+
+And create database name called "exam"
+
+	$ postgres-# create database exam
+	$ \l
+
+
+### Install PostgreSQL on Window :
+
+	To insatll on Window go throught this [postgres](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+
+### Install PostgreSQL connect to Python :
+	
+	$ pip install psycopg2
+
+### Clone repository :
+
+	https://github.com/RadheTians/MCQ-Quiz-System.git
+	cd MCQ-System-System
+
+### Migrations :
+
+To run migrations.
+
+	$ python manage.py makemigrations
+	$ python manage.py migrate
+
+### Create superuser :
+
+To create super user run.
+
+	$ python manage.py createsuperuser
+
+After running this command it will ask for username, password. You can access admin panel from (localhost:8000/admin/)
+
+## Running locally :
  
+To run at localhost. It will run on port 8000 by default.
 
-## USER INSTRUCTIONS
- 
-   1. Open CMD, and change/move to the directory of the file interface.py ,i.e, mini.
-
-   	$ cd /'PATH'/mini
-
- 
-   2. Open the tool to start, by executing mdata.py file.
- 
-   	$ python interface.py
- 
-   
-   3. Enter the pathname in the tool for metadata extraction and click on the button for its corresponding type of sorted output.
-
+	$ python manage.py runserver
 
 

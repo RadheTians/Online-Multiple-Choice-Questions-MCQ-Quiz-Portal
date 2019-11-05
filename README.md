@@ -4,11 +4,12 @@
 
 
 # About
-   This application is developed in Python Django (a web framework for rapid development). A user can sign in with any of the one roles "Moderator" or "Contestant". for more info see roles below. This Web Application presents a set of random questions from database to user and calculates user score accordingly.
+
+This application is developed in Python Django (a web framework for rapid development). The beauty of this project that user can stop quiz at any during the period of quiz exam. The  A user can sign in with any of the one roles "Admin" or "Normal User". This Web Application presents a set of random questions from database to user and calculates user score accordingly.
 
 # Add Features
 
-1. Added the feature that Admin can stop any user at any time wthin the eaxm period.
+1. Added the feature that Admin can stop any user at any time during the eaxm period.
 
 2. Added Timer support for each inividual question.
  
@@ -24,13 +25,20 @@
 
 # How to Use
 
-1. Use the Admin Panel to set up quiz. Quiz won't be enabled unless you click the "Enable" button. Click on the same to enable an added quiz.
+1. Use the Admin Panel to set up quiz questions. Quiz won't be enabled unless you click the "Start Test" button. Click on the same to start an added quiz.
 
-2. Scores are updated realtime on the server, however the leaderboard will be updated only when the user finishes the quiz, or there is a time out or the admin ends the quiz by clicking on "Disable" button.
+2. Scores are updated realtime on the server, however the result will be shown only when the user finishes the quiz, or there is a time out or the admin ends the quiz by clicking on "is_staff" attribute of Normal User.
 
-3. Once the admin clicks on the disable button, the quiz ends for all the users taking that quiz, irrespective of their active or inactive state (whether logged in or left the quiz in the middle only). The leaderboard will be updated either when a user "Finishes" his /her quiz and when the admin "disables" the quiz.
-4. Once the quiz is disabled, the quiz becomes inaccessible. If the quiz is enabled again later, only those user who have not already taken the quiz can take the quiz.
-5. It is recommended that you Enable the quiz when all the users are ready and disable the quiz when all the users have completed the quiz or time limit of taking the quiz has exceeded.
+3. Once the admin clicks on the individual user "is_staff" attribute, the quiz ends for that particular user taking that quiz. 
+
+4. Once the quiz is disabled for that particular user, the quiz becomes inaccessible for that user. If the quiz is enabled again for that particular user by Admin then, user will be able to start quiz.
+
+5. All the questions in quiz exam will come with individual time depands upon difficulty of question(i.e 20sec, 40sec, 600sec, etc).
+
+6. User can skill questions during quiz exam period.
+
+7. There is one text field where user can go to any question from any question to some any question.
+
 ## USAGE
    
    Python3, Django, Postgresql, psycopg2.

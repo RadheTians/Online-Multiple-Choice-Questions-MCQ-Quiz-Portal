@@ -7,6 +7,14 @@
 
 This application is developed in Python Django (a web framework for rapid development). The beauty of this project is that user can stop quiz at any during the period of quiz exam. The  A user can sign in with any of the one roles "Admin" or "Normal User". This Web Application presents a set of random questions from database to user and calculates user score accordingly.
 
+<p align="center">
+  <img src="Snapshot/111.png">
+</p>
+
+<p align="center">
+  <img src="Snapshot/115.png">
+</p>
+
 # Add Features
 
 1. Added the feature that Admin can stop any user at any time during the eaxm period.
@@ -104,7 +112,7 @@ And create database name called "exam"
 
 ### Install PostgreSQL on Window :
 
-	To insatll on Window go throught this [postgres](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+	To insatll on Window go throught this [postgres](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads).
 
 ### Install PostgreSQL connect to Python :
 	

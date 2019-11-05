@@ -6,7 +6,15 @@
 # About
    This application is developed in Python Django (a web framework for rapid development). A user can sign in with any of the one roles "Moderator" or "Contestant". for more info see roles below. This Web Application presents a set of random questions from database to user and calculates user score accordingly.
 
-# Admin Features
+# Add Features
+
+		Added the feature that Admin can stop any user at any time wthin the eaxm period.
+		Added Timer support for each inividual question. 
+		Added control to "Enable" and "Disable" the quiz on the Admin panel by Global Clock.
+		Added control to navigate among all the questions of quiz (during the quiz) and finish the quiz whenever the user wants.
+		Added control so that user can start the quiz at any time and continue the quiz even if some error or session timeout occurs.
+		Added control to store the answers to question and show a detailed analysis of the quiz results.
+		Improved GUI of the quiz panel.
 ## USAGE
    
    Python3, Django, Postgresql, psycopg2.

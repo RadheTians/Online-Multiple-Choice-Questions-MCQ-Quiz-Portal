@@ -1,10 +1,15 @@
-#Online Multiple Choice Questions(MCQ) Quiz Portal
+# Online Multiple Choice Questions(MCQ) Quiz Portal
+
+   A Python Django web application for taking MCQ (Multiple choice questions) online Quiz Tests.
 
 
+# About
+   This application is developed in Python Django (a web framework for rapid development). A user can sign in with any of the one roles "Moderator" or "Contestant". for more info see roles below. This Web Application presents a set of random questions from database to user and calculates user score accordingly.
 
+# Admin Features
 ## USAGE
    
-   Python3, Django, Postgresql.
+   Python3, Django, Postgresql, psycopg2.
    
 ## REQUIREMENT
  

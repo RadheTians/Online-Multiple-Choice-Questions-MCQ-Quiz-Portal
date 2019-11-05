@@ -1,0 +1,73 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<script>
+    function startTimer(duration) {
+      var timer = duration, hours, minutes, seconds;
+      setInterval(function () {
+          hours = parseInt(timer / 3600, 10);
+          minutes = parseInt(timer / 60, 10);
+          seconds = parseInt(timer % 60, 10);
+
+          hours = minutes < 10 ? "0" + hours : hours;
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+
+          document.getElementById("time").innerHTML = hours +":" + minutes + ":" + seconds;
+          
+          if (--timer < 0) {
+            setTimeout(function(){
+              
+            document.getElementById("forms").submit();
+            
+           }, 1);
+          }
+      }, 1000);
+    }
+    function myFunction() {
+      
+      document.getElementById("forms").submit();
+      
+    }
+    
+</script>
+
+<h1 style="color:rgb(10, 241, 98); text-align: center;">BIOLOGY MCQ QUESTIONS</h1>
+<div class="contain">
+  <ul>
+    <button onclick="window.location.href='Result'" id="btn">Submit<button>
+    <h1 id="time"></h1>
+    <a>{{user.first_name}}</a><br>
+    <a href="Logout">Logout</a>
+  </ul>
+</div>
+<script type="text/javascript">
+  
+  window.onload = startTimer({{question.duration}});
+  $(window).on('unload', function() {
+    $.ajax({
+      url: "your-url",
+      type: "post", // or "get"
+      data: 1,
+      success: function(data) {
+          alert(data.result);
+      }});
+  });
+</script>
+<div id="questions">
+    <form action="MCQ" method="POST" id="forms">
+        {% csrf_token %}
+        <h1>{{question.id}}. {{question.question}}</h1>
+
+        <input type="radio" name="{{question.question}}" value="{{question.option_one}}"> A. {{question.option_one}}<br><br>
+        <input type="radio" name="{{question.question}}" value="{{question.option_two}}"> B. {{question.option_two}}<br><br>
+        <input type="radio" name="{{question.question}}" value="{{question.option_three}}"> C. {{question.option_three}}<br><br>
+        <input type="radio" name="{{question.question}}" value="{{question.option_four}}"> D. {{question.option_four}}<br><br>
+        <input type="number" name="id" value="{{question.id}}">
+        <input type="button" onclick="myFunction()" value="Next Question" id="btn">
+    </form> 
+
+</div>
+ 
+{% endblock %}

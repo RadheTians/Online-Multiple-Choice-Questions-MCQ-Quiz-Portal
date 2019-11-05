@@ -144,7 +144,7 @@ To run at localhost. It will run on port 8000 by default.
 
 	$ python manage.py runserver
 
-To access this project go to any browser and type in url(localhost:8000)
+To access this project go to any browser and type in url (localhost:8000)
 
 <p align="center">
   <img src="Snapshot/112.png">

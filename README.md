@@ -144,4 +144,30 @@ To run at localhost. It will run on port 8000 by default.
 
 	$ python manage.py runserver
 
+<p align="center">
+  <img src="Snapshot/112.png">
+</p>
 
+<p align="center">
+  <img src="Snapshot/113.png">
+</p>
+
+<p align="center">
+  <img src="Snapshot/114.png">
+</p>
+
+<p align="center">
+  <img src="Snapshot/116.png">
+</p>
+
+<p align="center">
+  <img src="Snapshot/117.png">
+</p>
+
+<p align="center">
+  <img src="Snapshot/118.png">
+</p>
+
+<p align="center">
+  <img src="Snapshot/119.png">
+</p>
